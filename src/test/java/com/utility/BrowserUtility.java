@@ -43,7 +43,7 @@ public abstract class BrowserUtility {
 
 			driver.set(new ChromeDriver());
 		} else if (browserName.equalsIgnoreCase("edge")) {
-			System.setProperty("webdriver.edge.driver", "C:\\Drivers\\edgedriver_win64 (2)\\msedgedriver.exe");
+			//System.setProperty("webdriver.edge.driver", "C:\\Drivers\\edgedriver_win64 (2)\\msedgedriver.exe");
 			driver.set(new EdgeDriver());
 			;
 		} else {
@@ -58,7 +58,7 @@ public abstract class BrowserUtility {
 		if (browserName == Browser.CHROME) {
 			driver.set(new ChromeDriver());
 		} else if (browserName == Browser.EDGE) {
-			System.setProperty("webdriver.edge.driver", "C:\\Drivers\\edgedriver_win64 (2)\\msedgedriver.exe");
+			//System.setProperty("webdriver.edge.driver", "C:\\Drivers\\edgedriver_win64 (2)\\msedgedriver.exe");
 			driver.set(new EdgeDriver());
 			
 		} else if (browserName == Browser.FIREFOX) {
@@ -81,14 +81,14 @@ public abstract class BrowserUtility {
 		} 
 		else if (browserName == Browser.EDGE) {
 			if (isHeadless) {
-				System.setProperty("webdriver.edge.driver", "C:\\Drivers\\edgedriver_win64 (2)\\msedgedriver.exe");
+				//System.setProperty("webdriver.edge.driver", "C:\\Drivers\\edgedriver_win64 (2)\\msedgedriver.exe");
 				EdgeOptions options = new EdgeOptions();
 				options.addArguments("--headless=new");
 				options.addArguments("disable-gpu");
 				driver.set(new EdgeDriver(options));
 			} 
 			else {
-				System.setProperty("webdriver.edge.driver", "C:\\Drivers\\edgedriver_win64 (2)\\msedgedriver.exe");
+				//System.setProperty("webdriver.edge.driver", "C:\\Drivers\\edgedriver_win64 (2)\\msedgedriver.exe");
 				driver.set(new EdgeDriver());
 			}
 		} 
@@ -153,7 +153,7 @@ public abstract class BrowserUtility {
 		Date date = new Date();
 		SimpleDateFormat format = new SimpleDateFormat("HH-mm-ss");
 		String timeStamp = format.format(date);
-		String path = System.getProperty("user.dir") + "//screenshots//" + name + "-" + timeStamp + ".png";
+		String path =  "./screenshots/" + name + "-" + timeStamp + ".png";
 		File screenshotFile = new File(path);
 		try {
 			FileUtils.copyFile(screenshotData, screenshotFile);
