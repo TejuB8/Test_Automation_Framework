@@ -25,6 +25,7 @@ public class ProductCheckoutTest extends TestBase  {
 		Assert.assertTrue(result.contains("complete"));
 		
 		
+		
 	}
 
 }
