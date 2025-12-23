@@ -123,11 +123,11 @@ public abstract class BrowserUtility {
 		}
 	}
 
-//	public void quit() {
-//		if(driver.get()!=null) {
-//			driver.get().quit();
-//		}
-//	}
+	public void quit() {
+		if(driver.get()!=null) {
+			driver.get().quit();
+		}
+	}
 
 	public void goToWebsite(String url) {
 		logger.info("visiting the website" + url);
