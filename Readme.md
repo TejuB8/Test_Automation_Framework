@@ -72,15 +72,13 @@ Before running the framework, ensure the following are installed:
 **Running Tests on LambdaTest**:
 
 ```bash
-mvn clean test -Dbrowser=chrome -DisLambdaTest=true -DisHeadless=false -x
-
+mvn test -Dbrowser=chrome -DisLambdaTest=true -DisHeadless=false -x
 ```
 
 **Running Tests on chrome browser on Local Machine in Headless mode**:
 
 ```bash
-mvn clean test -Dbrowser=chrome -DisLambdaTest=false -DisHeadless=true -x
-
+mvn test -Dbrowser=chrome -DisLambdaTest=false -DisHeadless=true -x
 ```
 
 ## Reports and Logs
@@ -92,3 +90,4 @@ mvn clean test -Dbrowser=chrome -DisLambdaTest=false -DisHeadless=true -x
 
 ## Integrated the project with Github Actions
 This automation framework is Integrated with github actions. The tests will ve executed at 11:30 PM IST every single day.
+
